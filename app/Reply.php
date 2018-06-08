@@ -100,10 +100,9 @@ class Reply extends Model
     {
         return \Purify::clean($body);
     }
-    
+
     public function isBest()
     {
-    //    dd($this->thread->best_reply_id);
         return $this->thread->best_reply_id == $this->id;
     }
 
