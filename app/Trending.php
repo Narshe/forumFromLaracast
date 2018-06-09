@@ -9,7 +9,7 @@ use App\Thread;
 class Trending
 {
     /**
-     * [Get the last 5 results from redis and sort them by their rank]
+     * [Get the last 5 results from redis and sort them by their highest rank]
      * @return Array trending
      */
     public function get() {
@@ -18,7 +18,7 @@ class Trending
     }
 
     /**
-     * [Increment by one the key cacheKey and set the correct thread data]
+     * [Increment the cacheKey by one and sets the thread data]
      * @param  Thread $thread
      */
     public function push(Thread $thread) {

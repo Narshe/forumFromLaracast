@@ -17,6 +17,10 @@ trait RecordsActivity
         });
     }
 
+    /**
+     * [Record a new activity according to the event and the current authenticated user]
+     * @param  [type] $event [description]
+     */
     protected function recordActivity($event)
     {
         $this->activity()->create([
@@ -25,6 +29,10 @@ trait RecordsActivity
         ]);
     }
 
+    /**
+     * [activity]
+     * @return MorphMany activity
+     */
     public function activity()
     {
         return $this->morphMany('App\Activity', 'subject');

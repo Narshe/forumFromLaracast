@@ -87,7 +87,6 @@ class Reply extends Model
     {
         preg_match_all('/@([\w\-]+)/', $this->body, $matches);
 
-        //dd($matches);
         return $matches[1];
     }
 
